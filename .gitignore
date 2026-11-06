@@ -1,0 +1,38 @@
+# ---- 虚拟环境（约 380 MB，绝不入库）----
+.venv/
+venv/
+env/
+
+# ---- Python 缓存 ----
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ---- 运行产物（视频几十 MB，随时可再生成）----
+output/
+output/*.json
+*.log
+
+# ---- 原始素材：体积大且含人脸，不入库 ----
+samples/*
+!samples/.gitkeep
+!samples/README.md
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 敏感信息 ----
+.env
+*.key
+
+# ---- 说明：models/pose_landmarker_lite.task 有意入库 ----
+# 5.5 MB，国内无法直连 Google 下载，入库后 clone 即可直接跑通。
+# 若日后模型迭代频繁，改用 Git LFS 管理。

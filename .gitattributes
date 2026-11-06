@@ -1,0 +1,15 @@
+# 统一换行：文本在仓库里一律 LF，检出到 Windows 自动转 CRLF
+* text=auto eol=lf
+
+# Windows 脚本保持 CRLF
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# 二进制文件不做换行转换、不做文本 diff
+*.task binary
+*.mp4 binary
+*.avi binary
+*.mov binary
+*.png binary
+*.jpg binary
+*.jpeg binary
